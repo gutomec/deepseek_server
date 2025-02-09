@@ -1,2 +1,2 @@
 deepseek-r1:1.5b
-deepseek-reasoner
+deepseek-r1:32b
