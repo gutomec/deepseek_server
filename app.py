@@ -19,7 +19,7 @@ def load_models() -> list[str]:
         with open('models.txt', 'r') as f:
             return [line.strip() for line in f if line.strip()]
     except FileNotFoundError:
-        return ["deepseek-r1:7b"]
+        return ["deepseek-r1:32b"]
 
 def generate_stream(prompt: str, model: str) -> Iterator[str]:
     response = requests.post(
