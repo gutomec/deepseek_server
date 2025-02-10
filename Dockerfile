@@ -19,7 +19,7 @@ COPY models.txt .
 EXPOSE 8501
 EXPOSE 11434
 
-RUN echo '#!/bin/bash\nollama serve &\nsleep 5\nollama pull deepseek-r1:32b\nstreamlit run app.py --server.address=0.0.0.0' > /app/start.sh \
+RUN echo '#!/bin/bash\nollama serve &\nsleep 5\nollama pull deepseek-r1:1.5b\nstreamlit run app.py --server.address=0.0.0.0' > /app/start.sh \
     && chmod +x /app/start.sh
 
 CMD ["/app/start.sh"]
